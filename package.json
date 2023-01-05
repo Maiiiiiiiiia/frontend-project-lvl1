@@ -1,11 +1,12 @@
 {
   "name": "@hexlet/code",
-  "type": "module",
   "version": "1.0.0",
+  "type": "module",
   "bin": {
     "brain-games": "bin/brain-games.js",
     "brain-even": "bin/brain-even.js",
-    "brain-calc": "bin/brain-calc.js"
+    "brain-calc": "bin/brain-calc.js",
+    "brain-gcd": "bin/brain-gcd.js"
   },
   "description": "[![Actions Status](https://github.com/Maiiiiiiiiia/frontend-project-lvl1/workflows/hexlet-check/badge.svg)](https://github.com/Maiiiiiiiiia/frontend-project-lvl1/actions)",
   "main": "index.js",
