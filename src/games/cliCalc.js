@@ -1,6 +1,5 @@
 import readlineSync, { question } from 'readline-sync';
 import getRandomArbitrary from '../getRandomArbitrary.js';
-import beginning from '../index.js'
 
 const instruction = (number1, operator, number2) => {
     switch (operator) {
