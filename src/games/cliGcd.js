@@ -13,7 +13,7 @@ const nod = (number1, number2) => {
       number2 = number2 - number1;
     }
   }
-  gcd = number1;
+  return gcd = number1;
 };
 
 
