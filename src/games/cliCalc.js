@@ -1,5 +1,9 @@
-import readlineSync, { question } from 'readline-sync';
+//import readlineSync, { question } from 'readline-sync';
 import getRandomArbitrary from '../getRandomArbitrary.js';
+import gameBrain from '../index.js';
+
+const gameRules = 'What is the result of the expression?';
+const operations = ['+', '-', '*'];
 
 const instruction = (number1, operator, number2) => {
     switch (operator) {
@@ -14,37 +18,50 @@ const instruction = (number1, operator, number2) => {
     }
 };
 
-const roundsCount = 3;
-const gameRules = 'What is the result of the expression?';
-
-function evenCalc() {
-    console.log('Welcome to the Brain Games!');
-    const name = readlineSync.question('May I have your name? ');
-    console.log(`Hello, ${name}!`);
-    console.log(gameRules);
-
-    for (let i = 0; i < roundsCount; i += 1) {
-        const operations = ['+', '-', '*'];
-        const number1 = getRandomArbitrary(1, 50);
-        const number2 = getRandomArbitrary(1, 50);
-        const randomOperator = operations[getRandomArbitrary(0, 2)];
-
-        console.log(`Question: ${number1} ${randomOperator} ${number2}`);
-        const question = readlineSync.question('Your answer: ');
-
-        const correctAnswer = `${instruction(number1, randomOperator, number2)}`;
-
-        if ( question != correctAnswer ) {
-            console.log(`${question} is wrong answer ;(. Correct answer was ${correctAnswer}.`);
-            console.log(`Let's try again, ${name}!`);
-            return;
-        } 
-        if ( question === correctAnswer) {
-         console.log('Correct!');
-        }
-        
-    }
-    console.log(`Congratulations, ${name}!`);
+const brainCheck = () => {
+  const number1 = getRandomArbitrary(1, 50);
+  const number2 = getRandomArbitrary(1, 50);
+  const randomOperator = operations[getRandomArbitrary(0, 2)];
+  const someQuestion = `${number1} ${randomOperator} ${number2}`;
+  const correctAnswer = `${instruction(number1, randomOperator, number2)}`;
+  return [someQuestion, correctAnswer];
 };
 
+const evenCalc = () => {
+  gameBrain(gameRules, brainCheck);
+}
+
 export default evenCalc;
+
+
+//function evenCalc() {
+//    console.log('Welcome to the Brain Games!');
+//    const name = readlineSync.question('May I have your name? ');
+//    console.log(`Hello, ${name}!`);
+//    console.log(gameRules);
+
+//    for (let i = 0; i < roundsCount; i += 1) {
+//        const operations = ['+', '-', '*'];
+//        const number1 = getRandomArbitrary(1, 50);
+//        const number2 = getRandomArbitrary(1, 50);
+//        const randomOperator = operations[getRandomArbitrary(0, 2)];
+
+//        console.log(`Question: ${number1} ${randomOperator} ${number2}`);
+//        const question = readlineSync.question('Your answer: ');
+
+//        const correctAnswer = `${instruction(number1, randomOperator, number2)}`;
+
+//        if ( question != correctAnswer ) {
+//            console.log(`${question} is wrong answer ;(. Correct answer was ${correctAnswer}.`);
+//            console.log(`Let's try again, ${name}!`);
+//            return;
+//        } 
+//        if ( question === correctAnswer) {
+//        console.log('Correct!');
+//        }
+        
+//    }
+//    console.log(`Congratulations, ${name}!`);
+//};
+
+
