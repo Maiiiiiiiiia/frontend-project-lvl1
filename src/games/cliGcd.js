@@ -4,8 +4,8 @@ import gameBrain from '../index.js';
 const gameRules = 'Find the greatest common divisor of given numbers.';
 
 const nod = (numOne, numTwo) => {
-  const nOne = numOne;
-  const nTwo = numTwo;
+  let nOne = numOne;
+  let nTwo = numTwo;
   while (nOne !== nTwo) {
     if (nOne > nTwo) {
       nOne -= nTwo;
