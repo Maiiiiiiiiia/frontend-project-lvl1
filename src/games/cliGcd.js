@@ -3,15 +3,15 @@ import gameBrain from '../index.js';
 
 const gameRules = 'Find the greatest common divisor of given numbers.';
 
-const nod = (number1, number2) => {
-  while (number1 !== number2) {
-    if (number1 > number2) {
-      number1 -= number2;
+const nod = (numOne, numTwo) => {
+  while (numOne !== numTwo) {
+    if (numOne > numTwo) {
+      numOne -= numTwo;
     } else {
-      number2 -= number1;
+      numTwo -= numOne;
     }
   }
-  return number1;
+  return numOne;
 };
 
 const brainCheck = () => {
