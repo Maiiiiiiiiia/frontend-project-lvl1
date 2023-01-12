@@ -17,12 +17,13 @@ Is a set of five console games based on popular mobile brain training apps. Each
 
 <h2>Setup:</h2>
 <ol>
-  <li>Check the current updates for database with available packages: enter command line *apt update*</li>
-  <li>Install latest version of Node.js(команда)</li>
-  <li>install npm</li>
-  <li>Склонируйте созданный репозиторий проекта локально. SHH key</li>
-  <li>make install</li>
-  <li>начните игру make *name-games*</li>
+  <li>Check the current updates for database with available packages: enter command line `apt update`</li>
+  <li>Install Node.js package `apt install nodejs`</li>
+  <li>Upgrade latest version of Node.js `apt upgrade nodejs`</li>
+  <li>install npm `apt install npm`</li>
+  <li>Clone repository by SHH key `git@github.com:Maiiiiiiiiia/frontend-project-lvl1.git`</li>
+  <li>eEnter command line `make install`</li>
+  <li>Start the game by command `make *name-games*`</li>
 </ol>
 
 <h3>brain-even asciinema</h3>
