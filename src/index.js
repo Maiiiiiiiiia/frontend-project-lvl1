@@ -12,7 +12,7 @@ const gameBrain = (gameRules, brainCheck) => {
     const [someQuestion, correctAnswer] = brainCheck();
     console.log(`Question: ${someQuestion}`);
     const question = readlineSync.question('Your answer: ');
-    if (question !== correctAnswer ) {
+    if (question !== correctAnswer) {
       console.log(`'${question}' is wrong answer ;(. Correct answer was '${correctAnswer}'.`);
       console.log(`Let's try again, ${name}!`);
       return;
@@ -21,7 +21,7 @@ const gameBrain = (gameRules, brainCheck) => {
       console.log('Correct!');
     }
   }
-    console.log(`Congratulations, ${name}!`);
+  console.log(`Congratulations, ${name}!`);
 };
 
 export default gameBrain;

@@ -4,7 +4,6 @@ import gameBrain from '../index.js';
 const gameRules = 'Find the greatest common divisor of given numbers.';
 
 const nod = (number1, number2) => {
-  //const gcd;
   while (number1 !== number2) {
     if (number1 > number2) {
       number1 -= number2;
@@ -16,10 +15,10 @@ const nod = (number1, number2) => {
 };
 
 const brainCheck = () => {
-  const number1 = getRandomArbitrary(1, 50);
-  const number2 = getRandomArbitrary(1, 50);
-  const someQuestion = `${number1} ${number2}`;
-  const correctAnswer = `${nod(number1, number2)}`;
+  const num1 = getRandomArbitrary(1, 50);
+  const num2 = getRandomArbitrary(1, 50);
+  const someQuestion = `${num1} ${num2}`;
+  const correctAnswer = `${nod(num1, num2)}`;
 
   return [someQuestion, correctAnswer];
 };

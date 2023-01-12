@@ -12,14 +12,13 @@ const isPrime = (num) => {
   }
   if (num % 2 === 0) {
     return 'no';
-  } else {
-    for (let i = 3; i < num; i++) {
-  if (num % i === 0) {
-    return 'no';
+  }
+    for (let i = 3; i < num; i += 1) {
+      if (num % i === 0) {
+        return 'no';
       }
     }
     return 'yes';
-  }
 };
 
 const brainCheck = () => {

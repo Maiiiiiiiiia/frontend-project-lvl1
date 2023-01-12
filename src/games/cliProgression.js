@@ -6,8 +6,8 @@ const gameRules = 'What number is missing in the progression?';
 const foo4 = (x, d, l) => {
   const len = l - 1;
   const arr = [];
-  arr[0] = x;  
-  for (let i = 1; i <= len; i ++) {
+  arr[0] = x;
+  for (let i = 1; i <= len; i += 1) {
     arr[i] = arr[i - 1] + d;
   }
   return arr;
@@ -23,10 +23,10 @@ const brainCheck = () => {
   const correctAnswer = `${setOfNum[space]}`;
   setOfNum[space] = '..';
   const someQuestion = setOfNum.join(' ');
-   return [someQuestion, correctAnswer];
+  return [someQuestion, correctAnswer];
 };
 
 const evenProgression = () => {
-    gameBrain(gameRules, brainCheck);
+  gameBrain(gameRules, brainCheck);
 };
 export default evenProgression;
