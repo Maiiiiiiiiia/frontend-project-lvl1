@@ -1,4 +1,4 @@
 #!/usr/bin/env node
-import evenProgression from '../src/games/cliProgression.js';
+import gameProgression from '../src/games/progressionLogic.js';
 
-evenProgression();
+gameProgression();

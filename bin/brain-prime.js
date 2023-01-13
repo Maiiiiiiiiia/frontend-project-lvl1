@@ -1,4 +1,4 @@
 #!/usr/bin/env node
-import evenPrime from '../src/games/cliPrime.js';
+import gamePrime from '../src/games/primeLogic.js';
 
-evenPrime();
+gamePrime();

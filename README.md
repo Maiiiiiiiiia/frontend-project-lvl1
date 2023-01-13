@@ -17,6 +17,8 @@ Is a set of five console games based on popular mobile brain training apps. Each
 
 <h2>Setup:</h2>
 <ol>
+  <li>To run JavaScript code, you need to download and install Node.js.</li>
+  <li>Your version of Node.js. must be higher than v19.2.0</li>
   <li>Check the current updates for database with available packages: enter command line `apt update`</li>
   <li>Install Node.js package `apt install nodejs`</li>
   <li>Upgrade latest version of Node.js `apt upgrade nodejs`</li>

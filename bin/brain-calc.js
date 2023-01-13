@@ -1,4 +1,4 @@
 #!/usr/bin/env node
-import evenCalc from '../src/games/cliCalc.js';
+import gameCalc from '../src/games/calcLogic.js';
 
-evenCalc();
+gameCalc();
