@@ -13,7 +13,7 @@ const calculation = (number1, operator, number2) => {
     case '*':
       return number1 * number2;
     default:
-      throw new Error('Parameter is not a operator!'); 
+      throw new Error('Parameter is not a operator!');
   }
 };
 

@@ -3,9 +3,6 @@ import engine from '../index.js';
 
 const concept = 'Answer "yes" if the number is even, otherwise answer "no".';
 
-const questionNum = getRandomNumber(1, 99);
-const correctAnswer = questionNum % 2 === 0 ? 'yes' : 'no';
-
 const parityСheck = (number) => {
   const parity = number % 2 === 0 ? 'yes' : 'no';
   return parity;
