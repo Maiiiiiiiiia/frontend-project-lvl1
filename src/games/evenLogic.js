@@ -3,7 +3,7 @@ import runGame from '../index.js';
 
 const gameRule = 'Answer "yes" if the number is even, otherwise answer "no".';
 
-const isParity = (num) => num % 2 === 0 ? 'yes' : 'no';
+const isParity = (num) => (num % 2 === 0 ? 'yes' : 'no');
 
 const generateData = () => {
   const someQuestion = getRandomNumber(1, 99);
