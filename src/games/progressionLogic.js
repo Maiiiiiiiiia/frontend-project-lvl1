@@ -4,13 +4,12 @@ import runGame from '../index.js';
 const gameRule = 'What number is missing in the progression?';
 
 const createProgression = (progressionStart, progressionStep, progressionLength) => {
-  const len = progressionLength - 1;
-  const arr = [];
-  arr[0] = progressionStart;
-  for (let i = 1; i <= len; i += 1) {
-    arr[i] = arr[i - 1] + progressionStep;
+  const massive = [];
+  massive[0] = progressionStart;
+  for (let i = 1; i <= progressionLength; i += 1) {
+    massive[i] = massive[i - 1] + progressionStep;
   }
-  return arr;
+  return massive;
 };
 
 const generateData = () => {

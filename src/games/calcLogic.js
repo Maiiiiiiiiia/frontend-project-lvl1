@@ -18,11 +18,11 @@ const calculate = (number1, operator, number2) => {
 };
 
 const generateData = () => {
-  const number1 = getRandomNumber(1, 50);
-  const number2 = getRandomNumber(1, 50);
+  const firstRandomNum = getRandomNumber(1, 50);
+  const secondRandomNum = getRandomNumber(1, 50);
   const randomOperator = operations[getRandomNumber(0, 2)];
-  const someQuestion = `${number1} ${randomOperator} ${number2}`;
-  const correctAnswer = `${calculate(number1, randomOperator, number2)}`;
+  const someQuestion = `${firstRandomNum} ${randomOperator} ${secondRandomNum}`;
+  const correctAnswer = `${calculate(firstRandomNum, randomOperator, secondRandomNum)}`;
   return [someQuestion, correctAnswer];
 };
 
