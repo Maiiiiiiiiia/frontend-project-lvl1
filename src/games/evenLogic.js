@@ -1,22 +1,18 @@
 import getRandomNumber from '../getRandomNumber.js';
-import engine from '../index.js';
+import runGame from '../index.js';
+import isParity from '../isParity.js';
 
-const concept = 'Answer "yes" if the number is even, otherwise answer "no".';
+const gameRule = 'Answer "yes" if the number is even, otherwise answer "no".';
 
-const parityСheck = (number) => {
-  const parity = number % 2 === 0 ? 'yes' : 'no';
-  return parity;
-};
-
-const roundGeneration = () => {
+const generateData = () => {
   const questionNum = getRandomNumber(1, 99);
   const someQuestion = `${questionNum}`;
-  const correctAnswer = parityСheck(questionNum);
+  const correctAnswer = isParity(questionNum);
   return [someQuestion, correctAnswer];
 };
 
-const gameEven = () => {
-  engine(concept, roundGeneration);
+const runGameEven = () => {
+  runGame(gameRule, generateData);
 };
 
-export default gameEven;
+export default runGameEven;

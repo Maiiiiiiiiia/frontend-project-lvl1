@@ -1,7 +1,7 @@
 import getRandomNumber from '../getRandomNumber.js';
-import engine from '../index.js';
+import runGame from '../index.js';
 
-const concept = 'What number is missing in the progression?';
+const gameRule = 'What number is missing in the progression?';
 
 const createProgression = (progressionStart, progressionStep, progressionLength) => {
   const len = progressionLength - 1;
@@ -13,7 +13,7 @@ const createProgression = (progressionStart, progressionStep, progressionLength)
   return arr;
 };
 
-const roundGeneration = () => {
+const generateData = () => {
   const firstStep = getRandomNumber(1, 50);
   const step = getRandomNumber(2, 10);
   const lengthOfProgr = getRandomNumber(5, 10);
@@ -26,7 +26,7 @@ const roundGeneration = () => {
   return [someQuestion, correctAnswer];
 };
 
-const gameProgression = () => {
-  engine(concept, roundGeneration);
+const runGameProgression = () => {
+  runGame(gameRule, generateData);
 };
-export default gameProgression;
+export default runGameProgression;
