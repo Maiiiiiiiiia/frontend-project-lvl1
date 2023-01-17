@@ -2,6 +2,14 @@ import getRandomNumber from '../getRandomNumber.js';
 import runGame from '../index.js';
 
 const gameRule = 'What number is missing in the progression?';
+const minValueOfRandomNum = 1;
+const maxValueOfRandomNum = 50;
+const minStepOfProgression = 10;
+const maxStepOfProgression = 10;
+const minLengthOfProgression = 5;
+const maxLengthOfProgression = 10;
+const minValueofSpace = 1;
+
 
 const createProgression = (progressionStart, progressionStep, progressionLength) => {
   const array = [];
@@ -13,19 +21,14 @@ const createProgression = (progressionStart, progressionStep, progressionLength)
 };
 
 const generateData = () => {
-  const maxValueOfRandomNum = 50;
-  const maxStepOfProgression = 10;
-  const maxLengthOfProgression = 10;
-  const minLengthOfProgression = 5;
-  const firstStep = getRandomNumber(1, maxValueOfRandomNum);
-  const step = getRandomNumber(1, maxStepOfProgression);
-  const lengthOfProgr = getRandomNumber(minLengthOfProgression, maxLengthOfProgression);
-
-  const setOfNum = createProgression(firstStep, step, lengthOfProgr);
-  const space = getRandomNumber(1, setOfNum.length - 1);
-  const correctAnswer = `${setOfNum[space]}`;
-  setOfNum[space] = '..';
-  const someQuestion = setOfNum.join(' ');
+  const firstStep = getRandomNumber(minValueOfRandomNum, maxValueOfRandomNum);
+  const step = getRandomNumber(minStepOfProgression, maxStepOfProgression);
+  const lengthOfProgression = getRandomNumber(minLengthOfProgression, maxLengthOfProgression);
+  const progression = createProgression(firstStep, step, lengthOfProgression);
+  const space = getRandomNumber(minValueofSpace, progression.length - 1);
+  const correctAnswer = `${progression[space]}`;
+  progression[space] = '..';
+  const someQuestion = progression.join(' ');
   return [someQuestion, correctAnswer];
 };
 

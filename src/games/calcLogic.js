@@ -3,6 +3,8 @@ import runGame from '../index.js';
 
 const gameRule = 'What is the result of the expression?';
 const operations = ['+', '-', '*'];
+const minValueOfRandomNum = 1;
+const maxValueOfRandomNum = 50;
 
 const calculate = (number1, operator, number2) => {
   switch (operator) {
@@ -18,9 +20,8 @@ const calculate = (number1, operator, number2) => {
 };
 
 const generateData = () => {
-  const maxValueOfRandomNum = 50;
-  const firstRandomNum = getRandomNumber(1, maxValueOfRandomNum);
-  const secondRandomNum = getRandomNumber(1, maxValueOfRandomNum);
+  const firstRandomNum = getRandomNumber(minValueOfRandomNum, maxValueOfRandomNum);
+  const secondRandomNum = getRandomNumber(minValueOfRandomNum, maxValueOfRandomNum);
   const randomOperator = operations[getRandomNumber(0, operations.length - 1)];
   const someQuestion = `${firstRandomNum} ${randomOperator} ${secondRandomNum}`;
   const correctAnswer = `${calculate(firstRandomNum, randomOperator, secondRandomNum)}`;
