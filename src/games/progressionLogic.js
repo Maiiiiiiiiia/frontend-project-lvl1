@@ -10,7 +10,6 @@ const minLengthOfProgression = 5;
 const maxLengthOfProgression = 10;
 const minValueofSpace = 1;
 
-
 const createProgression = (progressionStart, progressionStep, progressionLength) => {
   const array = [];
   array[0] = progressionStart;
