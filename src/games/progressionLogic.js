@@ -4,18 +4,23 @@ import runGame from '../index.js';
 const gameRule = 'What number is missing in the progression?';
 
 const createProgression = (progressionStart, progressionStep, progressionLength) => {
-  const massive = [];
-  massive[0] = progressionStart;
+  const array = [];
+  array[0] = progressionStart;
   for (let i = 1; i <= progressionLength; i += 1) {
-    massive[i] = massive[i - 1] + progressionStep;
+    array[i] = array[i - 1] + progressionStep;
   }
-  return massive;
+  return array;
 };
 
 const generateData = () => {
-  const firstStep = getRandomNumber(1, 50);
-  const step = getRandomNumber(2, 10);
-  const lengthOfProgr = getRandomNumber(5, 10);
+  const maxValueOfRandomNum = 50;
+  const maxStepOfProgression = 10;
+  const maxLengthOfProgression = 10;
+  const minLengthOfProgression = 5;
+  
+  const firstStep = getRandomNumber(1, maxValueOfRandomNum);
+  const step = getRandomNumber(1, maxStepOfProgression);
+  const lengthOfProgr = getRandomNumber(minLengthOfProgression, maxLengthOfProgression);
 
   const setOfNum = createProgression(firstStep, step, lengthOfProgr);
   const space = getRandomNumber(1, setOfNum.length - 1);

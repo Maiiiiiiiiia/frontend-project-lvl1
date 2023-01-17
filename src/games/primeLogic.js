@@ -16,7 +16,8 @@ const isPrime = (num) => {
 };
 
 const generateData = () => {
-  const someQuestion = getRandomNumber(1, 50);
+  const maxValueOfRandomNum = 50;
+  const someQuestion = getRandomNumber(1, maxValueOfRandomNum);
   const correctAnswer = isPrime(someQuestion) ? 'yes' : 'no';
   return [someQuestion, correctAnswer];
 };

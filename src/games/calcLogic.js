@@ -18,9 +18,10 @@ const calculate = (number1, operator, number2) => {
 };
 
 const generateData = () => {
-  const firstRandomNum = getRandomNumber(1, 50);
-  const secondRandomNum = getRandomNumber(1, 50);
-  const randomOperator = operations[getRandomNumber(0, 2)];
+  const maxValueOfRandomNum = 50;
+  const firstRandomNum = getRandomNumber(1, maxValueOfRandomNum);
+  const secondRandomNum = getRandomNumber(1, maxValueOfRandomNum);
+  const randomOperator = operations[getRandomNumber(0, operations.length - 1)];
   const someQuestion = `${firstRandomNum} ${randomOperator} ${secondRandomNum}`;
   const correctAnswer = `${calculate(firstRandomNum, randomOperator, secondRandomNum)}`;
   return [someQuestion, correctAnswer];

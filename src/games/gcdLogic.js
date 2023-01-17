@@ -12,8 +12,9 @@ const calculateGCD = (num1, num2) => {
 };
 
 const generateData = () => {
-  const firstRandomNum = getRandomNumber(1, 50);
-  const secondRandomNum = getRandomNumber(1, 50);
+  const maxValueOfRandomNum = 50;
+  const firstRandomNum = getRandomNumber(1, maxValueOfRandomNum);
+  const secondRandomNum = getRandomNumber(1, maxValueOfRandomNum);
   const someQuestion = `${firstRandomNum} ${secondRandomNum}`;
   const correctAnswer = `${calculateGCD(firstRandomNum, secondRandomNum)}`;
 

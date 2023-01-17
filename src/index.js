@@ -17,9 +17,7 @@ const runGame = (gameRule, generateData) => {
       console.log(`Let's try again, ${name}!`);
       return;
     }
-    if (question === correctAnswer) {
-      console.log('Correct!');
-    }
+    console.log('Correct!');
   }
   console.log(`Congratulations, ${name}!`);
 };
