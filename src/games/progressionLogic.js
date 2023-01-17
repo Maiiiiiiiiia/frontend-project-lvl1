@@ -17,7 +17,6 @@ const generateData = () => {
   const maxStepOfProgression = 10;
   const maxLengthOfProgression = 10;
   const minLengthOfProgression = 5;
-  
   const firstStep = getRandomNumber(1, maxValueOfRandomNum);
   const step = getRandomNumber(1, maxStepOfProgression);
   const lengthOfProgr = getRandomNumber(minLengthOfProgression, maxLengthOfProgression);
